@@ -1,0 +1,241 @@
+:root {
+  --cream: #FAF7F2;
+  --soft-beige: #F0EAE2;
+  --warm-brown: #5C4033;
+  --deep-brown: #3E2C23;
+  --purple: #6C4CF1;
+  --blue: #00B3FF;
+  --white: #FFFFFF;
+  --primary-color: #371c4b;
+  --beige: #F1E9D2;
+}
+
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--deep-brown);
+}
+
+/* HEADER */
+header {
+  background: var(--primary-color);
+  padding: 24px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+}
+
+/* Brand Title */
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  color: white;
+}
+
+/* Navigation Links */
+header a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: var(--warm-brown);
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header a:hover {
+  color: var(--purple);
+  transform: translateY(-2px);
+}
+
+/* LOGIN PAGE */
+.center-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: var(--beige);
+  padding: 40px;
+  width: 360px;
+  border-radius: 22px;
+  box-shadow: 0 20px 50px rgba(94, 135, 146, 0.08);
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: 1px solid var(--soft-beige);
+  background: #fff;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(108, 76, 241, 0.3);
+}
+
+/* PRODUCTS GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+/* PRODUCT CARD */
+.card {
+  background: var(--beige);
+  padding: 22px;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  background: var(--soft-beige);
+  border-radius: 16px;
+}
+
+/* TEXT */
+.card h3 {
+  font-size: 18px;
+  margin: 14px 0 6px;
+  color: var(--deep-brown);
+  transition: color 0.3s ease;
+}
+
+.card h3:hover {
+  color: var(--purple);
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--warm-brown);
+}
+
+/* BUTTON */
+.card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 179, 255, 0.3);
+}
+
+/* CART PAGE */
+#cartItems .card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+#cartItems img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* CHECKOUT BUTTON */
+.checkout-btn {
+  margin: 40px;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  border: none;
+  width: calc(100% - 80px);
+  font-size: 17px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(108, 76, 241, 0.35);
+}
+
+/* Cart Styled Like Page Title */
+header .cart-btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+header .cart-btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* Continue Shopping Button – Same Style as Cart */
+.continue-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: white;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.25s ease;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 76, 241, 0.3);
+}
+

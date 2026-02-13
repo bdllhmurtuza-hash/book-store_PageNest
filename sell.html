@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sell Your Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 Sell a Book</h1>
+  <a href="index.html" class="continue-btn">← Back to Store</a>
+</header>
+
+<section>
+  <form id="sellForm">
+    <input type="text" id="title" placeholder="Book Title" required>
+    <input type="text" id="author" placeholder="Author" required>
+    <input type="number" id="price" placeholder="Price" required>
+    <select id="condition" required>
+      <option value="">Select Condition</option>
+      <option value="New">New</option>
+      <option value="Good">Good</option>
+      <option value="Used">Used</option>
+    </select>
+    <input type="file" id="image">
+    <button type="submit" class="continue-btn">List Book</button>
+  </form>
+</section>
+
+<section>
+  <h2>Books You Listed:</h2>
+  <div class="products" id="listedBooks"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
