@@ -239,3 +239,20 @@ header .cart-btn:hover {
   box-shadow: 0 8px 20px rgba(108, 76, 241, 0.3);
 }
 
+.login-card button {
+  margin-right: 10px; /* space between Login and Register */
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between; /* spreads buttons evenly */
+  margin-top: 10px;               /* space from inputs above */
+}
+
+.button-row button {
+  flex: 1;                        /* buttons same width */
+  margin: 0 5px;                  /* small gap between buttons */
+  padding: 10px;                  /* button height */
+  font-size: 16px;
+  cursor: pointer;
+}

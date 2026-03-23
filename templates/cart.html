@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+  <h1>🛒 Your Cart</h1>
+  <a href="{{ url_for('home') }}">← Go Back To Shopping</a>
+</header>
+
+<section id="cartItems"></section>
+
+<h2 id="cartTotal">Total: ₹0</h2>
+
+<button class="checkout-btn" onclick="checkout()">Proceed to Purchase</button>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
