@@ -327,7 +327,7 @@ function addToCart(id) {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Added to cart!");
+  alert("Book’s in your cart!");
 }
 
 const cartItems = document.getElementById("cartItems");
@@ -373,11 +373,6 @@ function removeItem(i) {
   location.reload();
 }
 
-function checkout() {
-  alert("Purchase successful 🎉");
-  localStorage.removeItem("cart");
-  location.reload();
-}
 
 
 // ---------- SELL BOOK ----------
@@ -387,34 +382,36 @@ if (sellForm) {
   sellForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const book = {
-      title: document.getElementById("title").value,
-      author: document.getElementById("author").value,
-      price: document.getElementById("price").value,
-      condition: document.getElementById("condition").value,
-      image: "/static/new_images/default.jpg"
+    const fileInput = document.getElementById("image");
+    const file = fileInput.files[0];
+
+    const reader = new FileReader();
+
+    reader.onload = function() {
+      const book = {
+        title: document.getElementById("title").value,
+        author: document.getElementById("author").value,
+        price: document.getElementById("price").value,
+        condition: document.getElementById("condition").value,
+        image: file ? reader.result : "/static/new_images/default.jpg"
+      };
+
+      let books = JSON.parse(localStorage.getItem("userBooks")) || [];
+      books.push(book);
+
+      localStorage.setItem("userBooks", JSON.stringify(books));
+
+      alert("Book listed successfully!");
+      location.reload();
     };
 
-    let books = JSON.parse(localStorage.getItem("userBooks")) || [];
-    books.push(book);
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      reader.onload();
+    }
 
-    localStorage.setItem("userBooks", JSON.stringify(books));
-
-    alert("Book listed successfully!");
-    const listedBooks = document.getElementById("listedBooks");
-
-    listedBooks.innerHTML += `
-   <div class="card">
-    <img src="/static/new_images/default.jpg" width="100">
-    <h3>${book.title}</h3>
-    <p>${book.author}</p>
-    <p>₹${book.price}</p>
-    <p>${book.condition}</p>
-   </div>
- `;
-
-  this.reset();
-
+    this.reset();
   });
 }
 
@@ -425,16 +422,25 @@ const listedBooks = document.getElementById("listedBooks");
 if (listedBooks) {
   let books = JSON.parse(localStorage.getItem("userBooks")) || [];
 
-  books.forEach(b => {
+  books.forEach((b, i) => {
     listedBooks.innerHTML += `
       <div class="card">
-       <h3>${b.title}</h3>
+        <img src="${b.image}" width="100">
+        <h3>${b.title}</h3>
         <p>${b.author}</p>
         <p>₹${b.price}</p>
         <p>${b.condition}</p>
+        <button onclick="deleteUserBook(${i})">Delete</button>
       </div>
     `;
   });
+}
+
+function deleteUserBook(i) {
+  let books = JSON.parse(localStorage.getItem("userBooks")) || [];
+  books.splice(i, 1);
+  localStorage.setItem("userBooks", JSON.stringify(books));
+  location.reload();
 }
 
 
@@ -444,23 +450,64 @@ function register() {
   const pass = document.getElementById("password").value;
 
   if (!email || !pass) {
-    alert("Fill all fields");
+    alert("Please fill all fields");
     return;
   }
 
   let users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // check if user already exists
-  const exists = users.find(u => u.email === email);
-
-  if (exists) {
-    alert("User already exists!");
+  if (users.find(u => u.email === email)) {
+    alert("Email already registered");
     return;
   }
 
   users.push({ email: email, password: pass });
-
   localStorage.setItem("users", JSON.stringify(users));
+  alert("Registration successful!");
+}
 
-  alert("Registered successfully!");
+// ---------- LOGIN ----------
+function login() {
+  const email = document.getElementById("email").value;
+  const pass = document.getElementById("password").value;
+
+  if (!email || !pass) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  const user = users.find(u => u.email === email && u.password === pass);
+
+  if (user) {
+    window.location.href = "/home"; // login successful
+  } else {
+    alert("Invalid email or password");
+  }
+}
+// ---------- PAYMENT MODAL ----------
+
+function showPaymentOptions() {
+  const modal = document.getElementById("paymentModal");
+  if (modal) {
+    modal.style.display = "block";
+  } else {
+    alert("Payment modal not found");
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("paymentModal");
+  if (modal) {
+    modal.style.display = "none";
+  }
+}
+
+function completePurchase(method) {
+  alert("Payment Method: " + method + "\nPurchase Successful!");
+
+  localStorage.removeItem("cart");
+
+  closeModal();
+  location.reload();
 }
