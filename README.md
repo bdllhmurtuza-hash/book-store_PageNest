@@ -32,23 +32,23 @@ Tech - Stack :
 
 How to Get Started :
 
-Clone the repository
+1. Clone the repository
 
-git clone <repository-url>
+git clone https://github.com/bdllhmurtuza-hash/book-store_PageNest-Frontend.git
 
-Navigate into the project
+2. Navigate into the project folder
 
-cd PageNest
+cd book-store_PageNest-Frontend
 
-Install Flask
+3. Install Flask
 
 pip install flask
 
-Run the application
+4. Run the application
 
 python app.py
 
-Open your browser and visit:
+5. Open your browser and visit
 
 http://127.0.0.1:5000
 
