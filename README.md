@@ -8,14 +8,14 @@ Designed as a mini project, PageNest demonstrates both frontend design and backe
 
 it's Features :
 
-* 🔐 User login and registration
-* 📧 Login validation for Gmail addresses and valid passwords
-* 👤 Continue as a guest without creating an account
-* 📚 Browse a curated collection of books
-* 🛒 Add books to the shopping cart
-* 📖 Sell books through a dedicated page
-* 🎨 Modern beige & purple UI with gradient buttons and hover animations
-* 💾 Browser Local Storage support for storing user information during demonstrations
+* User login and registration
+* Login validation for Gmail addresses and valid passwords
+* Continue as a guest without creating an account
+* Browse a curated collection of books
+* Add books to the shopping cart
+* Sell books through a dedicated page
+* Modern beige & purple UI with gradient buttons and hover animations
+* Browser Local Storage support for storing user information during demonstrations
 
 ⸻
 
@@ -73,7 +73,7 @@ Screenshots:
 * ![Sell Book Page](images/sellbook.png)
 ⸻
 
-🔮 Future Improvements
+Improvements which can be implemented in future:
 
 * Database integration (SQLite/MySQL)
 * Search and filtering functionality
@@ -82,6 +82,7 @@ Screenshots:
 * Online payment gateway
 * Order history
 * Admin dashboard
+  & Much more....
 
 ⸻
 
