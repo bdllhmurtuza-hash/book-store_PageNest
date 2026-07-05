@@ -1,4 +1,4 @@
-📚 PageNest
+PageNest
 
 PageNest is a modern online bookstore web application developed using Flask, HTML, CSS, and JavaScript. The project focuses on providing an elegant user experience with a clean beige and purple theme, smooth hover animations, and an pleasing shopping interface.
 
@@ -34,23 +34,13 @@ How to Get Started :
 
 1. Clone the repository
 
-git clone https://github.com/bdllhmurtuza-hash/book-store_PageNest-Frontend.git
+2. Navigate into the project folder: cd book-store_PageNest-Frontend
 
-2. Navigate into the project folder
+3. Install Flask (inside the terminal): pip install flask
 
-cd book-store_PageNest-Frontend
+4. Run the application: python app.py
 
-3. Install Flask
-
-pip install flask
-
-4. Run the application
-
-python app.py
-
-5. Open your browser and visit
-
-http://127.0.0.1:5000
+5. Open your browser and visit: http://127.0.0.1:5000
 
 ⸻
 
@@ -86,7 +76,7 @@ Improvements which can be implemented in future:
 
 ⸻
 
-👨‍💻 Author
+Author
 
 Abdullah Murtuza
 
