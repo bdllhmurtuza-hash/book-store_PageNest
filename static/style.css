@@ -325,29 +325,31 @@ section h2 {
 @media (max-width: 768px) {
 
   header {
-    padding: 18px 20px;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   header h1 {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .products {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    gap: 16px;
   }
 
   .card {
     width: 100%;
-    padding: 18px;
+    padding: 12px;
   }
 
   .card img {
-    height: 220px;
+    height: 180px;
   }
 
   .center-page {
@@ -361,7 +363,7 @@ section h2 {
   }
 
   .button-row {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 
@@ -375,8 +377,8 @@ section h2 {
   }
 
   #cartItems .card {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
   }
 
   #cartItems img {
