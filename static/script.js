@@ -344,7 +344,7 @@ if (cartItems) {
     cartItems.innerHTML += `
       <div class="card">
         <img src="${item.image}" width="100">
-        <div>
+        <div class="cart-details">
           <h3>${item.title}</h3>
           <p>₹${item.price}</p>
           <input type="number" min="1" value="${item.qty}"
