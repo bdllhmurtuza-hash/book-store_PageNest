@@ -29,18 +29,8 @@ Tech - Stack :
 * Browser Local Storage
 
 ⸻
-
-How to Get Started :
-
-1. Clone the repository
-
-2. Navigate into the project folder: cd book-store_PageNest-Frontend
-
-3. Install Flask (inside the terminal): pip install flask
-
-4. Run the application: python app.py
-
-5. Open your browser and visit: http://127.0.0.1:5000
+Now you can view the website directly 
+just by clicking this link : https://pagenest-rnqd.onrender.com
 
 ⸻
 
