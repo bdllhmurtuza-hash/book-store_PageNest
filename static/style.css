@@ -244,20 +244,19 @@ header .cart-btn:hover {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  background: white;
-  color: var(--primary-color);
-  padding: 10px 20px;
-  border-radius: 30px;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 8px 20px rgba(108, 76, 241, 0.25);
 }
 
 .continue-btn:hover {
-  background: linear-gradient(135deg, var(--purple), var(--blue));
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(108, 76, 241, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(108, 76, 241, 0.4);
 }
 
 /* ===========================
