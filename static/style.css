@@ -279,12 +279,17 @@ header .cart-btn{
     white-space:nowrap;
 }
 
-header nav,
 header .nav-links{
+    width:100%;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
     gap:18px;
+}
+
+header .continue-btn{
+    font-size:14px;
+    white-space:nowrap;
 }
 
 /* ---------- HOME PAGE ---------- */
