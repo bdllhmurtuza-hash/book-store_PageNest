@@ -354,6 +354,23 @@ header .cart-btn:hover {
 
 }
 
+
+/* Desktop Listed Books Heading Alignment */
+@media (min-width:769px) {
+  section h2 {
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding-left: 40px;
+    text-align: left;
+  }
+}
+
+/* Desktop Sell Form Header Spacing */
+@media (min-width:769px) {
+  #sellForm {
+    margin-top: 50px;
+  }
+}
 /* ===========================
    Mobile Responsive
 =========================== */
