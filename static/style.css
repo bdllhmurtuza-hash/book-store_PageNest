@@ -25,7 +25,7 @@ body {
 /* HEADER */
 header {
   background: var(--primary-color);
-  padding: 24px 60px;
+  padding: 30px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -261,15 +261,16 @@ header .cart-btn:hover {
 /* ---------- HEADER ---------- */
 
 header{
-    padding:12px 14px;
+    padding:18px 14px;
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
+    justify-content:center;
     align-items:center;
-    gap:8px;
+    gap:14px;
 }
 
 header h1{
-    font-size:18px;
+    font-size:24px;
     white-space:nowrap;
 }
 
@@ -278,10 +279,12 @@ header .cart-btn{
     white-space:nowrap;
 }
 
-.continue-btn{
-    font-size:10px;
-    padding:8px 12px;
-    white-space:nowrap;
+header nav,
+header .nav-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
 }
 
 /* ---------- HOME PAGE ---------- */
